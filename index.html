@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>叮叮的每日计划清单</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>📅 每日计划清单</h1>
+        <p class="subtitle">每天进步一点点 ✨</p>
+
+        <div class="input-area">
+            <input 
+                type="text" 
+                id="planInput" 
+                placeholder="输入今天的计划，按回车添加～"
+                maxlength="50"
+            >
+            <button id="addBtn">➕ 添加</button>
+        </div>
+
+        <div class="stats">
+            <span id="statsText">已完成 0 / 共 0 条</span>
+            <button id="clearAllBtn" class="clear-all-btn">🗑️ 清空全部</button>
+        </div>
+
+        <ul id="planList" class="plan-list">
+        </ul>
+
+        <div id="emptyTip" class="empty-tip">
+            <div class="empty-emoji">🌱</div>
+            <p>还没有计划呢，添加第一个吧！</p>
+        </div>
+    </div>
+
+    <div id="celebrateModal" class="modal">
+        <div class="modal-content">
+            <div class="confetti">🎉🎊🎉🎊🎉</div>
+            <h2>perfect！🌟</h2>
+            <p>今天的任务全部完成啦！</p>
+            <p>真是棒棒的一天～ 💪</p>
+            <button id="newDayBtn">开启新的一天 ☀️</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
